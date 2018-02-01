@@ -13,7 +13,7 @@
 // limitations under the License.
 
 
-(function() {
+(function () {
   'use strict';
 
   var app = {
@@ -34,29 +34,32 @@
    *
    ****************************************************************************/
 
-  document.getElementById('butRefresh').addEventListener('click', function() {
+  document.getElementById('butRefresh').addEventListener('click', function () {
     // Refresh all of the forecasts
     app.updateForecasts();
   });
 
-  document.getElementById('butAdd').addEventListener('click', function() {
+  document.getElementById('butAdd').addEventListener('click', function () {
     // Open/show the add new city dialog
     app.toggleAddDialog(true);
   });
 
-  document.getElementById('butAddCity').addEventListener('click', function() {
+  document.getElementById('butAddCity').addEventListener('click', function () {
     // Add the newly selected city
     var select = document.getElementById('selectCityToAdd');
     var selected = select.options[select.selectedIndex];
     var key = selected.value;
     var label = selected.textContent;
-    // TODO init the app.selectedCities array here
+    if (!app.selectedCities) {
+      app.selectedCities = [];
+    }
     app.getForecast(key, label);
-    // TODO push the selected city to the array and save here
+    app.selectedCities.push({ key: key, label: label });
+    app.saveSelectedCities();
     app.toggleAddDialog(false);
   });
 
-  document.getElementById('butAddCancel').addEventListener('click', function() {
+  document.getElementById('butAddCancel').addEventListener('click', function () {
     // Close the add new city dialog
     app.toggleAddDialog(false);
   });
@@ -69,7 +72,7 @@
    ****************************************************************************/
 
   // Toggles the visibility of the add new city dialog.
-  app.toggleAddDialog = function(visible) {
+  app.toggleAddDialog = function (visible) {
     if (visible) {
       app.addDialog.classList.add('dialog-container--visible');
     } else {
@@ -79,7 +82,7 @@
 
   // Updates a weather card with the latest weather forecast. If the card
   // doesn't already exist, it's cloned from the template.
-  app.updateForecastCard = function(data) {
+  app.updateForecastCard = function (data) {
     var dataLastUpdated = new Date(data.created);
     var sunrise = data.channel.astronomy.sunrise;
     var sunset = data.channel.astronomy.sunset;
@@ -161,15 +164,15 @@
    * request goes through, then the card gets updated a second time with the
    * freshest data.
    */
-  app.getForecast = function(key, label) {
+  app.getForecast = function (key, label) {
     var statement = 'select * from weather.forecast where woeid=' + key;
     var url = 'https://query.yahooapis.com/v1/public/yql?format=json&q=' +
-        statement;
+      statement;
     // TODO add cache logic here
 
     // Fetch the latest data.
     var request = new XMLHttpRequest();
-    request.onreadystatechange = function() {
+    request.onreadystatechange = function () {
       if (request.readyState === XMLHttpRequest.DONE) {
         if (request.status === 200) {
           var response = JSON.parse(request.response);
@@ -189,16 +192,20 @@
   };
 
   // Iterate all of the cards and attempt to get the latest forecast data
-  app.updateForecasts = function() {
+  app.updateForecasts = function () {
     var keys = Object.keys(app.visibleCards);
-    keys.forEach(function(key) {
+    keys.forEach(function (key) {
       app.getForecast(key);
     });
   };
 
-  // TODO add saveSelectedCities function here
+  // Save list of cities to localStorage.
+  app.saveSelectedCities = function () {
+    var selectedCities = JSON.stringify(app.selectedCities);
+    localStorage.selectedCities = selectedCities;
+  };
 
-  app.getIconClass = function(weatherCode) {
+  app.getIconClass = function (weatherCode) {
     // Weather codes: https://developer.yahoo.com/weather/documentation.html#codes
     weatherCode = parseInt(weatherCode);
     switch (weatherCode) {
@@ -284,13 +291,13 @@
           code: 24
         },
         forecast: [
-          {code: 44, high: 86, low: 70},
-          {code: 44, high: 94, low: 73},
-          {code: 4, high: 95, low: 78},
-          {code: 24, high: 75, low: 89},
-          {code: 24, high: 89, low: 77},
-          {code: 44, high: 92, low: 79},
-          {code: 44, high: 89, low: 77}
+          { code: 44, high: 86, low: 70 },
+          { code: 44, high: 94, low: 73 },
+          { code: 4, high: 95, low: 78 },
+          { code: 24, high: 75, low: 89 },
+          { code: 24, high: 89, low: 77 },
+          { code: 44, high: 92, low: 79 },
+          { code: 44, high: 89, low: 77 }
         ]
       },
       atmosphere: {
@@ -302,10 +309,38 @@
       }
     }
   };
-  
-  app.updateForecastCard(initialWeatherForecast);
 
-  // TODO add startup code here
+  //app.updateForecastCard(initialWeatherForecast);
+
+  /************************************************************************
+   *
+   * Código necesario para iniciar la app
+   *
+   * NOTA: To simplify this codelab, we've used localStorage.
+   *   localStorage is a synchronous API and has serious performance
+   *   implications. It should not be used in production applications!
+   *   Instead, check out IDB (https://www.npmjs.com/package/idb) or
+   *   SimpleDB (https://gist.github.com/inexorabletash/c8069c042b734519680c)
+   ************************************************************************/
+
+  app.selectedCities = localStorage.selectedCities;
+  if (app.selectedCities) {
+    app.selectedCities = JSON.parse(app.selectedCities);
+    app.selectedCities.forEach(function (city) {
+      app.getForecast(city.key, city.label);
+    });
+  } else {
+    /* The user is using the app for the first time, or the user has not
+     * saved any cities, so show the user some fake data. A real app in this
+     * scenario could guess the user's location via IP lookup and then inject
+     * that data into the page.
+     */
+    app.updateForecastCard(initialWeatherForecast);
+    app.selectedCities = [
+      { key: initialWeatherForecast.key, label: initialWeatherForecast.label }
+    ];
+    app.saveSelectedCities();
+  }
 
   // TODO add service worker code here
 })();
