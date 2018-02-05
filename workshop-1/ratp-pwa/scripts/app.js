@@ -122,10 +122,10 @@
             caches.match(url).then(function (response) {
                 if (response) {
                     response.json().then(function updateFromCache(json) {
-                        var results = json.query.results;
+                        var results = json.result;
                         results.key = key;
                         results.label = label;
-                        results.created = json.query.created;
+                        results.created = json._metadata.date;
                         app.updateTimetableCard(results);
                     });
                 }
@@ -244,8 +244,8 @@
     }
 
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-            .register('./service-worker.js')
-            .then(function () { console.log('Service Worker Registered'); });
+        navigator.serviceWorker.register('/sw.js').then(function () {
+            console.log("Service Worker Registered");
+        });
     }
 })();

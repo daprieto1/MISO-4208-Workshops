@@ -1,0 +1,15 @@
+{
+  "name": "ratp-pwa",
+  "version": "1.0.0",
+  "description": "Schedules times",
+  "main": "scripts/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "sw-precache": "^5.2.1"
+  },
+  "author": "da.prieto@uniandes.edu.co",
+  "license": "ISC"
+}
