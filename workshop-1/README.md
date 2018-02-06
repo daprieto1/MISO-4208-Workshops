@@ -6,7 +6,9 @@ https://weather-e7f6f.firebaseapp.com/
 
 ## Comienza con una primera carga rápida
 
-![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/lighthouse1.png)En este momento la calificación de PWA esta en 45 porque:
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/lighthouse1.png)
+
+En este momento la calificación de PWA esta en 45 porque:
 
 * No registra un service worker
 * No responde 200 a las peticiones HTTP cuando esta offline
@@ -47,6 +49,8 @@ Curiosamente al alojar la PWA en el hosting de firebase, su rendimiento en red d
 Por otro lado las pruebas de performance no pudieron ser ejecutadas, ninguna de ellas y la justificación del error es `navigationStart was not found in the trace`.
 
 Como el error es compartido, entre las pruebas de Performance y las de PWA, me hace pensar que un inconveniente con el certificado SSL esta causando que algunas de las pruebas de lighthouse no se ejecuten de forma correcta sobre el ambiente de firebase.
+
+Tambiñen hay un issue de Github relacionado al error puntual https://github.com/GoogleChrome/lighthouse/issues/2394
 
 ---
 
