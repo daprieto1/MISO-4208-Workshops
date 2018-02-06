@@ -6,7 +6,7 @@ https://weather-e7f6f.firebaseapp.com/
 
 ## Comienza con una primera carga rápida
 
-![](/assets/taller1/lighthouse1.png)En este momento la calificación de PWA esta en 45 porque:
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/lighthouse1.png)En este momento la calificación de PWA esta en 45 porque:
 
 * No registra un service worker
 * No responde 200 a las peticiones HTTP cuando esta offline
@@ -17,7 +17,7 @@ https://weather-e7f6f.firebaseapp.com/
 
 ## Usa service workers para almacenar en caché por adelantado el shell de la app
 
-![](/assets/taller1/lighthouse2.png)
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/lighthouse2.png)
 
 En este momento la calificación de PWA esta en 64 porque:
 
@@ -28,13 +28,13 @@ En este momento la calificación de PWA esta en 64 porque:
 
 ## Usa service workers para almacenar en caché los datos de pronóstico climático
 
-![](/assets/taller1/lighthouse3.png)
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/lighthouse3.png)
 
 Aunque se esta usando cache para mejorar el rendimiento de la consulta de los datos climáticos usando una estrategia primero-cache-después-red, no se hizo ninguna mejora adicional en las métricas que lighthouse tiene en cuenta para calificar una aplicación respecto a su desempeño como PWA.
 
 ## Soporta la integración nativa e Impleméntala en un host seguro
 
-![](/assets/taller1/lighthouse4.png)
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/lighthouse4.png)
 
 En este momento la calificación de PWA esta en 73 porque:
 
@@ -54,7 +54,7 @@ Como el error es compartido, entre las pruebas de Performance y las de PWA, me h
 
 ## Sin cambios
 
-![](/assets/taller1/rtpa-lighthouse3.png)
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/rtpa-lighthouse3.png)
 
 La aplicación inicialmente no cumple con `7` de los `11` criterios que `Google Lighthhouse` define para una Aplicación Web Progresiva, tales criterios son:
 
@@ -97,9 +97,9 @@ if (app.selectedTimetables && app.selectedTimetables.length > 0) {
 
 Cuando una estación es añadida, automáticamente queda guardada en `Indexed DB` o en el `LocalStorage` dependiendo del doporte del browser. A continuación se muestran las 12 estaciones guardadas en `Indexed DB`, vale la pena notar que la información básica de todas las estaciones, es decir, (key, label) tan solo ocupa 19.5 KB.
 
-![](/assets/taller1/indexdb1.png)
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/indexdb1.png)
 
-![](/assets/taller1/indexdb2.png)
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/indexdb2.png)
 
 ## Funcionalidad 3: ServiceWorker
 
@@ -131,9 +131,9 @@ Sin embargo el listener `fetch` que se encarga de la interceptación de las peti
 
 En la siguiente imagen podemos ver que todas las peticiones a las estaciones ahora se mantienen en cache. No se puede seguir la guía de Google de forma ciega porque la respuesta del API es diferente.
 
-![](/assets/taller1/cache1.png)
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/cache1.png)
 
-![](/assets/taller1/indexdb2.png)
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/indexdb2.png)
 
 ## Funcionalidad 5: Integración nativa
 
@@ -143,17 +143,17 @@ En la siguiente imagen podemos ver que todas las peticiones a las estaciones aho
 
 https://schedules-app-a85c0.firebaseapp.com/
 
-![](/assets/taller1/firebase.png)
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/firebase.png)
 
 Mi hipótesis del ejercicio anterior, donde aseguraba que el Trier de firebase podría estar causando algún problema sobre la verificación que `Google Lighthouse` estaba arrojando sobre la velocidad bajo conexiones 3G queda desvirtuada al comprobar que esta aplicación en particular no tubo problemas con ese ítem.
 
-![](/assets/taller1/rtpa-lighthouse4.png)
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/rtpa-lighthouse4.png)
 
 ## Resultados
 
-![](/assets/taller1/rtpa-lighthouse1.png)
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/rtpa-lighthouse1.png)
 
-![](/assets/taller1/rtpa-lighthouse2.png)
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/rtpa-lighthouse2.png)
 
 Al final del ejercicio, se logró que `Google Lighthouse` calificará la aplicación con un 100% en todos los ítems que según esa herramienta componen a una Progressive Web Application.
 
