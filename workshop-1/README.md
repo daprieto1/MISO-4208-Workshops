@@ -149,7 +149,7 @@ Me encuentro trabajando en un sistema operativo MacOS, se adjunta evidencia de l
 
 Por último una evidencia en un sistema operativo Android.
 
-![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/native4.png)
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/native4.jpeg)
 
 ## Funcionalidad 6: Despliegue en firebase
 
