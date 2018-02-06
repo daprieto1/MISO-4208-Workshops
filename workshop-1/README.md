@@ -137,7 +137,19 @@ En la siguiente imagen podemos ver que todas las peticiones a las estaciones aho
 
 ## Funcionalidad 5: Integración nativa
 
+Para el manifiesto escogí colores base y nombres personalizados, así como imagenes de cada uno de los tamaños necesarios para la instalación en dispositivos, desde los 128x128 hasta los 512x512. 
 
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/native1.png)
+
+Me encuentro trabajando en un sistema operativo MacOS, se adjunta evidencia de la instalación de la aplicación en mi computador.
+
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/native2.png)
+
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/native3.png)
+
+Por último una evidencia en un sistema operativo Android.
+
+![](https://raw.githubusercontent.com/daprieto1/MISO-4208-Workshops/master/workshop-1/assets/taller1/native4.png)
 
 ## Funcionalidad 6: Despliegue en firebase
 
