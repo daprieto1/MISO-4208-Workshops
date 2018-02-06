@@ -83,6 +83,16 @@ db.transaction("timetables").objectStore("timetables").getAll().onsuccess = func
 app.initStorage(localStorage.selectedTimetables);
 ```
 
+Como ahora los datos pueden tener 2 formatos dependiendo de la fuente de origen, en el primer reload es necesario cambiar la condición de vacio para utilizar los datos de la estación por defecto.
+
+```
+app.selectedTimetables = typeof app.selectedTimetables == 'string' ? 
+    JSON.parse(app.selectedTimetables) : 
+    selectedTimetables;
+
+if (app.selectedTimetables && app.selectedTimetables.length > 0) {
+````
+
 ## Funcionalidad 2: Añadir estación
 
 Cuando una estación es añadida, automáticamente queda guardada en `Indexed DB` o en el `LocalStorage` dependiendo del doporte del browser. A continuación se muestran las 12 estaciones guardadas en `Indexed DB`, vale la pena notar que la información básica de todas las estaciones, es decir, (key, label) tan solo ocupa 19.5 KB.
@@ -122,6 +132,8 @@ Sin embargo el listener `fetch` que se encarga de la interceptación de las peti
 En la siguiente imagen podemos ver que todas las peticiones a las estaciones ahora se mantienen en cache. No se puede seguir la guía de Google de forma ciega porque la respuesta del API es diferente.
 
 ![](/assets/taller1/cache1.png)
+
+![](/assets/taller1/indexdb2.png)
 
 ## Funcionalidad 5: Integración nativa
 
