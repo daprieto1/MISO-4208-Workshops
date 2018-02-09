@@ -1,4 +1,4 @@
-import {browser, by, element, ElementFinder} from 'protractor';
+import { browser, by, element, ElementFinder } from 'protractor';
 
 export class TourOfHeroesPage {
   navigateTo() {
@@ -20,5 +20,11 @@ export class TourOfHeroesPage {
   enterNewHeroInInput(newHero: string) {
     element(by.tagName('input')).sendKeys(newHero);
     element(by.buttonText('Add')).click();
+  }
+
+  searchForHero(heroName: string) {
+    element(by.id('search-box')).sendKeys(heroName);
+    element(by.css('.search-result')).click();
+    return element.all((by.tagName('h2')));
   }
 }

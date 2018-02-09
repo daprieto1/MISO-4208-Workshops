@@ -1,4 +1,5 @@
 import { TourOfHeroesPage } from './app.po';
+import { element } from 'protractor';
 
 describe('Tour of heroes Dashboard', () => {
   let page: TourOfHeroesPage;
@@ -32,4 +33,19 @@ describe('Tour of heroes, heroes page', () => {
     expect(page.getAllHeroes().count()).toBe(currentHeroes.then(n => n + 1));
   });
 
+});
+
+describe('Tour of heroes, search for hero', function () {
+  let page: TourOfHeroesPage;
+
+  beforeEach(() => {
+    page = new TourOfHeroesPage;
+    page.navigateTo();
+  });
+
+  it('should find specific hero page', function () {
+    var result = page.searchForHero('Narco');
+    expect(result.count()).toBe(1);
+    expect(result.first().getText()).toEqual('Narco details!');
+  });
 });
