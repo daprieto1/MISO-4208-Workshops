@@ -8,6 +8,7 @@ workshop-2/protractor/tour-of-heroes-cli/package-lock.json
 workshop-2/webdriver-io/node_modules
 workshop-2/webdriver-io/package-lock.json
 workshop-2/webdriver-io/errorShots
+workshop-2/nightwatchjs/reports
 
 **/*.DS_Store
 **/*/node_modules
