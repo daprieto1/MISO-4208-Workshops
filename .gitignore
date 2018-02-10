@@ -5,6 +5,8 @@ workshop-2/cypress/node_modules
 workshop-2/cypress/package-lock.json
 workshop-2/protractor/tour-of-heroes-cli/node_modules
 workshop-2/protractor/tour-of-heroes-cli/package-lock.json
+workshop-2/webdriver-io/node_modules
+workshop-2/webdriver-io/package-lock.json
 
 **/*.DS_Store
 **/*/node_modules
