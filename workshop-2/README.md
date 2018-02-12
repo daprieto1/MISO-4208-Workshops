@@ -4,6 +4,9 @@
 
 ## Cypress
 
+**Problemas**
+Cuando descargue `Cypress` para MacOS, al intentar iniciar sesión con `GitHub`, salía un error que decia. `GitHub no soporta este navegador`, intente varias acciones para solucionar el problema, pero no fue posible, por tal razón instale `Cypress` usando `yarn` a través de linea de comandos. Para ejecutarlo solo basta introducir `./node_modules/.bin/cypress open`.
+
 **Conclusiones**
 
 * No sirvió la instalación para MAC descargandolo desde la página oficial, decia que GitHub no soportaba ese navegador. para solucionarlo fue necesario instalarlo por medio de línea de comandos con `npm`.
