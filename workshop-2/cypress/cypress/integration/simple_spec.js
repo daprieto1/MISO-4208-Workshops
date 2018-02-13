@@ -1,4 +1,4 @@
-describe('Los estudiantes login incorrecto', function () {
+describe('Los estudiantes e2e tests', function () {
 
     context('Login', function () {
         beforeEach(function () {
