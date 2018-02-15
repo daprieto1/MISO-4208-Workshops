@@ -137,6 +137,7 @@
         request.onreadystatechange = function () {
             if (request.readyState === XMLHttpRequest.DONE) {
                 if (request.status === 200) {
+                    window.APILoadtime  = performance.now();
                     var response = JSON.parse(request.response);
                     var result = {};
                     result.key = key;
@@ -216,6 +217,7 @@
             });
         } else {
             app.updateTimetableCard(initialStationTimetable);
+            app.getSchedule(initialStationTimetable.key, initialStationTimetable.label);
             app.selectedTimetables = [
                 { key: initialStationTimetable.key, label: initialStationTimetable.label }
             ];

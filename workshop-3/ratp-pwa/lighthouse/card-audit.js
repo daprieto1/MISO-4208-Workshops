@@ -12,7 +12,7 @@ class LoadAudit extends Audit {
             description: 'Schedule card initialized and ready',
             failureDescription: 'Schedule Card slow to initialize',
             helpText: 'Used to measure time from navigationStart to when the schedule' +
-                ' card is shown.',
+            ' card is shown.',
 
             requiredArtifacts: ['TimeToCard']
         };
