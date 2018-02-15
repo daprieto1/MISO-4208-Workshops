@@ -10,5 +10,8 @@ workshop-2/webdriver-io/package-lock.json
 workshop-2/webdriver-io/errorShots
 workshop-2/nightwatchjs/reports
 
+workshop-3/ratp-pwa/lighthouse/node_modules
+workshop-3/ratp-pwa/lighthouse/package-lock.json
+
 **/*.DS_Store
 **/*/node_modules
