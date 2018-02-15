@@ -12,6 +12,7 @@ workshop-2/nightwatchjs/reports
 
 workshop-3/ratp-pwa/lighthouse/node_modules
 workshop-3/ratp-pwa/lighthouse/package-lock.json
+workshop-3/ratp-pwa/lighthouse/*.html
 
 **/*.DS_Store
 **/*/node_modules

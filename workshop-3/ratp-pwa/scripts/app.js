@@ -215,7 +215,7 @@
                 app.getSchedule(timetable.key, timetable.label);
             });
         } else {
-            app.updateSchedules(initialStationTimetable);
+            app.updateTimetableCard(initialStationTimetable);
             app.selectedTimetables = [
                 { key: initialStationTimetable.key, label: initialStationTimetable.label }
             ];
