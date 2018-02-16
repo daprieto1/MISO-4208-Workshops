@@ -52,3 +52,8 @@ Puede ver el reporte de firebase completo en este enlace: [Reporte Firebase 3](h
 ![](assets/taller3/lighthouse8.png)
 
 ![](assets/taller3/lighthouse9.png)
+
+---
+
+## Pruebas E2E Headless
+

@@ -1,6 +1,15 @@
 var assert = require('assert');
 describe('los estudiantes login', function () {
 
+    beforeEach(function () {
+        originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
+        jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
+    });
+
+    afterEach(function () {
+        jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
+    })
+
     it('should visit los estudiantes and failed at log in', function () {
         browser.url('https://losestudiantes.co');
         browser.url('https://losestudiantes.co');
