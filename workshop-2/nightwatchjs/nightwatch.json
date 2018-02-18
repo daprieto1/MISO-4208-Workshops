@@ -30,7 +30,10 @@
             },
             "desiredCapabilities": {
                 "browserName": "firefox",
-                "marionette": true
+                "marionette": true,
+                "chromeOptions": {
+                    "args": [ "--headless", "--disable-gpu", "--window-size=800,600" ]
+                }
             }
         },
         "firefox": {

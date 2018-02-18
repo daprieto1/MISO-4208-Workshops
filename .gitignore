@@ -9,6 +9,10 @@ workshop-2/webdriver-io/node_modules
 workshop-2/webdriver-io/package-lock.json
 workshop-2/webdriver-io/errorShots
 workshop-2/nightwatchjs/reports
+workshop-2/cypress/cypress/videos/*.mp4
+workshop-2/cypress/cypress/cypress/videos/*.mp4
+workshop-2/cypress/cypress/screenshots/*.png
+workshop-2/cypress/cypress/screenshots/*.png
 
 workshop-3/ratp-pwa/lighthouse/node_modules
 workshop-3/ratp-pwa/lighthouse/package-lock.json
