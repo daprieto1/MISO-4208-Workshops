@@ -19,5 +19,7 @@ workshop-3/ratp-pwa/lighthouse/node_modules
 workshop-3/ratp-pwa/lighthouse/package-lock.json
 workshop-3/ratp-pwa/lighthouse/*.html
 
+workshop-4/cypress/node_modules
+
 **/*.DS_Store
 **/*/node_modules
