@@ -40,6 +40,11 @@ function unleashGremlins(ttl, callback) {
 
   horde.seed(1234);
 
+  horde.strategy(window.gremlins.strategies.distribution()
+    .delay(1)
+    .distribution([0.8, 0.2])
+  )
+
   horde.after(callback);
   window.onbeforeunload = stop;
   setTimeout(stop, ttl);
