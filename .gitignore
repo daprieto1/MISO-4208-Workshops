@@ -21,9 +21,8 @@ workshop-3/ratp-pwa/lighthouse/package-lock.json
 workshop-3/ratp-pwa/lighthouse/*.html
 
 workshop-4/cypress/node_modules
-workshop-4/gremlins-webdriver/errorShots
-
-workshop-4/gremlins-webdriver/node_modules
+workshop-4/gremlins-webdriver-master/errorShots
+workshop-4/gremlins-webdriver-master/node_modules
 
 **/*.DS_Store
 **/*/node_modules
