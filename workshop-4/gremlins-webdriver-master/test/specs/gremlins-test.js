@@ -16,33 +16,44 @@ function unleashGremlins(ttl, callback) {
   }
   var clickerGremlin = null;
   var formFiller = null;
+  var toucher = null;
+  var scroller = null;
 
   if (window.gremlins) {
 
     clickerGremlin = window.gremlins.species.clicker().clickTypes(['click']);
     clickerGremlin.canClick(function (element) {
-      return element.tagName == "A" || element.tagName == "BUTTON";
+      return (element.tagName == "A" || element.tagName == "BUTTON") && !element.hidden;
     })
 
     formFiller = window.gremlins.species.formFiller();
     formFiller.canFillElement(function (element) {
       console.log(element.type);
-      return element.tagName == "TEXTAREA" ||
+      return (element.tagName == "TEXTAREA" ||
         element.type == "text" ||
         element.type == "password" ||
-        element.type == "email";
+        element.type == "email") && !element.hidden;
     });
+
+    toucher = window.gremlins.species.toucher();
+    toucher.canTouch(function(element){
+      return !element.hidden;
+    });
+
+    scroller = window.gremlins.species.scroller();    
 
   }
   var horde = window.gremlins.createHorde()
     .gremlin(clickerGremlin)
-    .gremlin(formFiller);
+    .gremlin(formFiller)
+    .gremlin(toucher)
+    .gremlin(scroller);
 
   horde.seed(1234);
 
   horde.strategy(window.gremlins.strategies.distribution()
     .delay(1)
-    .distribution([0.8, 0.2])
+    .distribution([0.6, 0.2, 0.1, 0.1])
   )
 
   horde.after(callback);
