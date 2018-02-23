@@ -34,10 +34,12 @@ function randomEvent(monkeysLeft) {
         break;
     }
 
-    event.then(ml => {
-      cy.wait(1000)
-      randomEvent(ml);
-    });
+    event
+      .then(ml => {
+        cy.wait(1000)
+        randomEvent(ml);
+      })
+      .catch(err => console.log(err));
   }
 }
 
@@ -70,17 +72,22 @@ function getRandomInt(min, max) {
 
 function randomSelectEvent(monkeysLeft) {
   return new Promise((resolve, reject) => {
-    cy.get('select').then($selects => {
-      var randomSelect = $selects.get(getRandomInt(0, $selects.length));
-      var randomOption = randomSelect.options[getRandomInt(0, randomSelect.options.length)].value;
+    try {
+      cy.get('select')
+        .then($selects => {
+          var randomSelect = $selects[getRandomInt(0, $selects.length)];
+          var randomOption = randomSelect.options[getRandomInt(0, randomSelect.options.length)].value;
 
-      if (!Cypress.dom.isHidden(randomSelect)) {
-        console.log(`-> Selected option = ${randomOption}`);
-        cy.wrap(randomSelect).select(randomOption, { force: true });
-        monkeysLeft = monkeysLeft - 1;
-      }
+          if (!Cypress.dom.isHidden(randomSelect)) {
+            console.log(`-> Selected option = ${randomOption}`);
+            cy.wrap(randomSelect).select(randomOption, { force: true });
+            monkeysLeft = monkeysLeft - 1;
+          }
+          resolve(monkeysLeft);
+        });
+    } catch (err) {
       resolve(monkeysLeft);
-    });
+    }
   });
 }
 
@@ -99,14 +106,19 @@ function randomButtonClickEvent(monkeysLeft) {
 
 function randomTypeEvent(monkeysLeft) {
   return new Promise((resolve, reject) => {
-    cy.get('input[type="text"]').then($inputs => {
-      var randomInput = $inputs.get(getRandomInt(0, $inputs.length));
+    try {
+      cy.get('input[type="text"]')
+        .then($inputs => {
+          var randomInput = $inputs.get(getRandomInt(0, $inputs.length));
 
-      cy.wrap(randomInput).type('Pruebas Automáticas', { force: true });
-      monkeysLeft = monkeysLeft - 1;
+          cy.wrap(randomInput).type('Pruebas Automáticas', { force: true });
+          monkeysLeft = monkeysLeft - 1;
 
+          resolve(monkeysLeft);
+        });
+    } catch (err) {
       resolve(monkeysLeft);
-    });
+    }
   });
 }
 
