@@ -47,3 +47,21 @@ Fue un poco difícil entender como funcionaba, pero es una herramienta muy buena
 * Por otro lado dependiendo del tipo del input se determino se se debía llenar o no.
 * Se asigno un 60% de probabilidad al `gremling` de click para que fuera muy evidente que se ejecutaba más que los demás.
 * Finalmente se uso la propiedad `hidden` para evitar que cualquier `gremling` interactuara con elementos no visibles.
+
+## UI/Application Exerciser Monkey en Android
+
+### Instalación
+
+![](assets/android4.png)
+
+### Transmilenio y SITP
+
+![](assets/android1.gif)
+
+### UHabits
+
+![](assets/android2.gif)
+
+### K-9 Mail
+
+![](assets/android3.gif)
