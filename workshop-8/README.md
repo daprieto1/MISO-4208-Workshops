@@ -276,6 +276,8 @@ passIntent.putExtra(UxArgument.DISABLE_PASSCODE,new android.os.Parcelable[0]);
 
 ![](assets/mutode2.png)
 
+## supports color
+
 ![](assets/mutode3.png)
 
 ![](assets/mutode4.png)
