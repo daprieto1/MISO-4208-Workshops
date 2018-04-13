@@ -4,6 +4,12 @@
 
 ## Pitest
 
+![](assets/pit.png)
+
+![](assets/pit2.png)
+
+![](assets/pit3.png)
+
 ## MDROID+
 
 ### GNU_CASH
@@ -248,11 +254,19 @@ passIntent.putExtra(UxArgument.DISABLE_PASSCODE,new android.os.Parcelable[0]);
 |3|184||NO|||
 |4|232||NO|||
 |5|854||NO|||
-|6|249||NO|||
+|6|249|N/A|N/A|N/A|N/A|
 |7|264||NO|||
 |8|295||NO|||
 |9|395||NO|||
 |10|454||NO|||
+
+---
+
+## Stryker
+
+![](assets/stryker.png)
+
+![](assets/stryker2.png)
 
 
 
