@@ -1,0 +1,139 @@
+MUTANT 1:	CBM index.js Line 30:	`has256: level >= 2,` > `has256: level > 2,'`
+MUTANT 2:	CBM index.js Line 31:	`has16m: level >= 3` > `has16m: level > 3'`
+MUTANT 3:	CBM index.js Line 69:	`Number(process.versions.node.split('.')[0]) >= 8 &&` > `Number(process.versions.node.split('.')[0]) > 8 &&'`
+MUTANT 4:	CBM index.js Line 70:	`Number(osRelease[0]) >= 10 &&` > `Number(osRelease[0]) > 10 &&'`
+MUTANT 5:	CBM index.js Line 71:	`Number(osRelease[2]) >= 10586` > `Number(osRelease[2]) > 10586'`
+MUTANT 6:	CBM index.js Line 73:	`return Number(osRelease[2]) >= 14931 ? 3 : 2;` > `return Number(osRelease[2]) > 14931 ? 3 : 2;'`
+MUTANT 7:	CBM index.js Line 100:	`return version >= 3 ? 3 : 2;` > `return version > 3 ? 3 : 2;'`
+MUTANT 8:	NCM index.js Line 19:	`forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR, 10) !== 0;` > `forceColor = env.FORCE_COLOR.length !== 0 || parseInt(env.FORCE_COLOR, 10) !== 0;'`
+MUTANT 9:	NCM index.js Line 19:	`forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR, 10) !== 0;` > `forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR, 10) === 0;'`
+MUTANT 10:	NCM index.js Line 23:	`if (level === 0) {` > `if (level !== 0) {'`
+MUTANT 11:	NCM index.js Line 30:	`has256: level >= 2,` > `has256: level < 2,'`
+MUTANT 12:	NCM index.js Line 31:	`has16m: level >= 3` > `has16m: level < 3'`
+MUTANT 13:	NCM index.js Line 36:	`if (forceColor === false) {` > `if (forceColor !== false) {'`
+MUTANT 14:	NCM index.js Line 50:	`if (stream && !stream.isTTY && forceColor !== true) {` > `if (stream && !stream.isTTY && forceColor === true) {'`
+MUTANT 15:	NCM index.js Line 60:	`if (process.platform === 'win32') {` > `if (process.platform !== 'win32') {'`
+MUTANT 16:	NCM index.js Line 69:	`Number(process.versions.node.split('.')[0]) >= 8 &&` > `Number(process.versions.node.split('.')[0]) < 8 &&'`
+MUTANT 17:	NCM index.js Line 70:	`Number(osRelease[0]) >= 10 &&` > `Number(osRelease[0]) < 10 &&'`
+MUTANT 18:	NCM index.js Line 71:	`Number(osRelease[2]) >= 10586` > `Number(osRelease[2]) < 10586'`
+MUTANT 19:	NCM index.js Line 73:	`return Number(osRelease[2]) >= 14931 ? 3 : 2;` > `return Number(osRelease[2]) < 14931 ? 3 : 2;'`
+MUTANT 20:	NCM index.js Line 80:	`if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME === 'codeship') {` > `if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME !== 'codeship') {'`
+MUTANT 21:	NCM index.js Line 91:	`if (env.COLORTERM === 'truecolor') {` > `if (env.COLORTERM !== 'truecolor') {'`
+MUTANT 22:	NCM index.js Line 100:	`return version >= 3 ? 3 : 2;` > `return version < 3 ? 3 : 2;'`
+MUTANT 23:	NCM index.js Line 119:	`if (env.TERM === 'dumb') {` > `if (env.TERM !== 'dumb') {'`
+MUTANT 24:	RAEM index.js Line 80:	`if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME === 'codeship') {` > `if (['CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME === 'codeship') {'`
+MUTANT 25:	RAEM index.js Line 80:	`if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME === 'codeship') {` > `if (['TRAVIS', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME === 'codeship') {'`
+MUTANT 26:	RAEM index.js Line 80:	`if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME === 'codeship') {` > `if (['TRAVIS', 'CIRCLECI', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME === 'codeship') {'`
+MUTANT 27:	RAEM index.js Line 80:	`if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME === 'codeship') {` > `if (['TRAVIS', 'CIRCLECI', 'APPVEYOR'].some(sign => sign in env) || env.CI_NAME === 'codeship') {'`
+MUTANT 28:	RCM index.js Line 19:	`forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR, 10) !== 0;` > `forceColor = true || parseInt(env.FORCE_COLOR, 10) !== 0;'`
+MUTANT 29:	RCM index.js Line 19:	`forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR, 10) !== 0;` > `forceColor = false || parseInt(env.FORCE_COLOR, 10) !== 0;'`
+MUTANT 30:	RCM index.js Line 19:	`forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR, 10) !== 0;` > `forceColor = env.FORCE_COLOR.length === 0 || true;'`
+MUTANT 31:	RCM index.js Line 19:	`forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR, 10) !== 0;` > `forceColor = env.FORCE_COLOR.length === 0 || false;'`
+MUTANT 32:	RCM index.js Line 23:	`if (level === 0) {` > `if (true) {'`
+MUTANT 33:	RCM index.js Line 23:	`if (level === 0) {` > `if (false) {'`
+MUTANT 34:	RCM index.js Line 36:	`if (forceColor === false) {` > `if (true) {'`
+MUTANT 35:	RCM index.js Line 36:	`if (forceColor === false) {` > `if (false) {'`
+MUTANT 36:	RCM index.js Line 50:	`if (stream && !stream.isTTY && forceColor !== true) {` > `if (stream && !stream.isTTY && true) {'`
+MUTANT 37:	RCM index.js Line 50:	`if (stream && !stream.isTTY && forceColor !== true) {` > `if (stream && !stream.isTTY && false) {'`
+MUTANT 38:	RCM index.js Line 60:	`if (process.platform === 'win32') {` > `if (true) {'`
+MUTANT 39:	RCM index.js Line 60:	`if (process.platform === 'win32') {` > `if (false) {'`
+MUTANT 40:	RCM index.js Line 80:	`if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME === 'codeship') {` > `if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || true) {'`
+MUTANT 41:	RCM index.js Line 80:	`if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME === 'codeship') {` > `if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || false) {'`
+MUTANT 42:	RCM index.js Line 91:	`if (env.COLORTERM === 'truecolor') {` > `if (true) {'`
+MUTANT 43:	RCM index.js Line 91:	`if (env.COLORTERM === 'truecolor') {` > `if (false) {'`
+MUTANT 44:	RCM index.js Line 119:	`if (env.TERM === 'dumb') {` > `if (true) {'`
+MUTANT 45:	RCM index.js Line 119:	`if (env.TERM === 'dumb') {` > `if (false) {'`
+MUTANT 46:	RFCAM index.js Line 2:	`const os = require('os');` > `const os = require();'`
+MUTANT 47:	RFCAM index.js Line 3:	`const hasFlag = require('has-flag');` > `const hasFlag = require();'`
+MUTANT 48:	RFCAM index.js Line 8:	`if (hasFlag('no-color') ||` > `if (hasFlag() ||'`
+MUTANT 49:	RFCAM index.js Line 9:	`hasFlag('no-colors') ||` > `hasFlag() ||'`
+MUTANT 50:	RFCAM index.js Line 10:	`hasFlag('color=false')) {` > `hasFlag()) {'`
+MUTANT 51:	RFCAM index.js Line 12:	`} else if (hasFlag('color') ||` > `} else if (hasFlag() ||'`
+MUTANT 52:	RFCAM index.js Line 13:	`hasFlag('colors') ||` > `hasFlag() ||'`
+MUTANT 53:	RFCAM index.js Line 14:	`hasFlag('color=true') ||` > `hasFlag() ||'`
+MUTANT 54:	RFCAM index.js Line 15:	`hasFlag('color=always')) {` > `hasFlag()) {'`
+MUTANT 55:	RFCAM index.js Line 19:	`forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR, 10) !== 0;` > `forceColor = env.FORCE_COLOR.length === 0 || parseInt(10) !== 0;'`
+MUTANT 56:	RFCAM index.js Line 19:	`forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR, 10) !== 0;` > `forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR) !== 0;'`
+MUTANT 57:	RFCAM index.js Line 40:	`if (hasFlag('color=16m') ||` > `if (hasFlag() ||'`
+MUTANT 58:	RFCAM index.js Line 41:	`hasFlag('color=full') ||` > `hasFlag() ||'`
+MUTANT 59:	RFCAM index.js Line 42:	`hasFlag('color=truecolor')) {` > `hasFlag()) {'`
+MUTANT 60:	RFCAM index.js Line 46:	`if (hasFlag('color=256')) {` > `if (hasFlag()) {'`
+MUTANT 61:	RFCAM index.js Line 67:	`const osRelease = os.release().split('.');` > `const osRelease = os.release().split();'`
+MUTANT 62:	RFCAM index.js Line 69:	`Number(process.versions.node.split('.')[0]) >= 8 &&` > `Number() >= 8 &&'`
+MUTANT 63:	RFCAM index.js Line 69:	`Number(process.versions.node.split('.')[0]) >= 8 &&` > `Number(process.versions.node.split()[0]) >= 8 &&'`
+MUTANT 64:	RFCAM index.js Line 70:	`Number(osRelease[0]) >= 10 &&` > `Number() >= 10 &&'`
+MUTANT 65:	RFCAM index.js Line 71:	`Number(osRelease[2]) >= 10586` > `Number() >= 10586'`
+MUTANT 66:	RFCAM index.js Line 73:	`return Number(osRelease[2]) >= 14931 ? 3 : 2;` > `return Number() >= 14931 ? 3 : 2;'`
+MUTANT 67:	RFCAM index.js Line 80:	`if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME === 'codeship') {` > `if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some() || env.CI_NAME === 'codeship') {'`
+MUTANT 68:	RFCAM index.js Line 88:	`return /^(9\.(0*[1-9]\d*)\.|\d{2,}\.)/.test(env.TEAMCITY_VERSION) ? 1 : 0;` > `return /^(9\.(0*[1-9]\d*)\.|\d{2,}\.)/.test() ? 1 : 0;'`
+MUTANT 69:	RFCAM index.js Line 96:	`const version = parseInt((env.TERM_PROGRAM_VERSION || '').split('.')[0], 10);` > `const version = parseInt(10);'`
+MUTANT 70:	RFCAM index.js Line 96:	`const version = parseInt((env.TERM_PROGRAM_VERSION || '').split('.')[0], 10);` > `const version = parseInt((env.TERM_PROGRAM_VERSION || '').split('.')[0]);'`
+MUTANT 71:	RFCAM index.js Line 96:	`const version = parseInt((env.TERM_PROGRAM_VERSION || '').split('.')[0], 10);` > `const version = parseInt((env.TERM_PROGRAM_VERSION || '').split()[0], 10);'`
+MUTANT 72:	RFCAM index.js Line 107:	`if (/-256(color)?$/i.test(env.TERM)) {` > `if (/-256(color)?$/i.test()) {'`
+MUTANT 73:	RFCAM index.js Line 111:	`if (/^screen|^xterm|^vt100|^rxvt|color|ansi|cygwin|linux/i.test(env.TERM)) {` > `if (/^screen|^xterm|^vt100|^rxvt|color|ansi|cygwin|linux/i.test()) {'`
+MUTANT 74:	RFCAM index.js Line 127:	`const level = supportsColor(stream);` > `const level = supportsColor();'`
+MUTANT 75:	RFCAM index.js Line 128:	`return translateLevel(level);` > `return translateLevel();'`
+MUTANT 76:	RFCAM index.js Line 133:	`stdout: getSupportLevel(process.stdout),` > `stdout: getSupportLevel(),'`
+MUTANT 77:	RFCAM index.js Line 134:	`stderr: getSupportLevel(process.stderr)` > `stderr: getSupportLevel()'`
+MUTANT 78:	RFDPM index.js Line 22:	`function translateLevel(level) {` > `function translateLevel() {'`
+MUTANT 79:	RFDPM index.js Line 35:	`function supportsColor(stream) {` > `function supportsColor() {'`
+MUTANT 80:	RFDPM index.js Line 126:	`function getSupportLevel(stream) {` > `function getSupportLevel() {'`
+MUTANT 81:	RFM Lines 22-33: Commented function translateLevel
+MUTANT 82:	RFM Lines 35-124: Commented function supportsColor
+MUTANT 83:	RFM Lines 80-80: Commented function (assigned / anonymous)
+MUTANT 84:	RFM Lines 126-129: Commented function getSupportLevel
+MUTANT 85:	RLM Commented line 2:	const os = require('os');
+MUTANT 86:	RLM Commented line 3:	const hasFlag = require('has-flag');
+MUTANT 87:	RLM Commented line 5:	const env = process.env;
+MUTANT 88:	RLM Commented line 7:	let forceColor;
+MUTANT 89:	RLM Commented line 11:	forceColor = false;
+MUTANT 90:	RLM Commented line 16:	forceColor = true;
+MUTANT 91:	RLM Commented line 19:	forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR, 10) !== 0;
+MUTANT 92:	RLM Commented line 24:	return false;
+MUTANT 93:	RLM Commented line 37:	return 0;
+MUTANT 94:	RLM Commented line 43:	return 3;
+MUTANT 95:	RLM Commented line 47:	return 2;
+MUTANT 96:	RLM Commented line 53:	return 1;
+MUTANT 97:	RLM Commented line 55:	return 0;
+MUTANT 98:	RLM Commented line 58:	const min = forceColor ? 1 : 0;
+MUTANT 99:	RLM Commented line 67:	const osRelease = os.release().split('.');
+MUTANT 100:	RLM Commented line 73:	return Number(osRelease[2]) >= 14931 ? 3 : 2;
+MUTANT 101:	RLM Commented line 76:	return 1;
+MUTANT 102:	RLM Commented line 81:	return 1;
+MUTANT 103:	RLM Commented line 84:	return min;
+MUTANT 104:	RLM Commented line 88:	return /^(9\.(0*[1-9]\d*)\.|\d{2,}\.)/.test(env.TEAMCITY_VERSION) ? 1 : 0;
+MUTANT 105:	RLM Commented line 92:	return 3;
+MUTANT 106:	RLM Commented line 96:	const version = parseInt((env.TERM_PROGRAM_VERSION || '').split('.')[0], 10);
+MUTANT 107:	RLM Commented line 100:	return version >= 3 ? 3 : 2;
+MUTANT 108:	RLM Commented line 102:	return 2;
+MUTANT 109:	RLM Commented line 108:	return 2;
+MUTANT 110:	RLM Commented line 112:	return 1;
+MUTANT 111:	RLM Commented line 116:	return 1;
+MUTANT 112:	RLM Commented line 120:	return min;
+MUTANT 113:	RLM Commented line 123:	return min;
+MUTANT 114:	RLM Commented line 127:	const level = supportsColor(stream);
+MUTANT 115:	RLM Commented line 128:	return translateLevel(level);
+MUTANT 116:	ROPM index.js Line 28:	`level,` > `'`
+MUTANT 117:	ROPM index.js Line 29:	`hasBasic: true,` > `'`
+MUTANT 118:	ROPM index.js Line 30:	`has256: level >= 2,` > `'`
+MUTANT 119:	ROPM index.js Line 31:	`has16m: level >= 3` > `'`
+MUTANT 120:	ROPM index.js Line 132:	`supportsColor: getSupportLevel,` > `'`
+MUTANT 121:	ROPM index.js Line 133:	`stdout: getSupportLevel(process.stdout),` > `'`
+MUTANT 122:	ROPM index.js Line 134:	`stderr: getSupportLevel(process.stderr)` > `'`
+MUTANT 123:	RSCM Lines 99-100: Commented case 'iTerm.app'
+MUTANT 124:	RSCM Lines 101-102: Commented case 'Apple_Terminal'
+MUTANT 125:	RVM index.js Line 24:	`return false;` > `return true;'`
+MUTANT 126:	RVM index.js Line 37:	`return 0;` > `return 1;'`
+MUTANT 127:	RVM index.js Line 43:	`return 3;` > `return 0;'`
+MUTANT 128:	RVM index.js Line 47:	`return 2;` > `return 0;'`
+MUTANT 129:	RVM index.js Line 53:	`return 1;` > `return 0;'`
+MUTANT 130:	RVM index.js Line 55:	`return 0;` > `return 1;'`
+MUTANT 131:	RVM index.js Line 76:	`return 1;` > `return 0;'`
+MUTANT 132:	RVM index.js Line 81:	`return 1;` > `return 0;'`
+MUTANT 133:	RVM index.js Line 92:	`return 3;` > `return 0;'`
+MUTANT 134:	RVM index.js Line 102:	`return 2;` > `return 0;'`
+MUTANT 135:	RVM index.js Line 108:	`return 2;` > `return 0;'`
+MUTANT 136:	RVM index.js Line 112:	`return 1;` > `return 0;'`
+MUTANT 137:	RVM index.js Line 116:	`return 1;` > `return 0;'`
+MUTANT 138:	SCM index.js Line 99:	`case 'iTerm.app':` > `case 'zcixgiex':'`
+MUTANT 139:	SCM index.js Line 101:	`case 'Apple_Terminal':` > `case 'jvjucowm':'`

@@ -1,0 +1,150 @@
+Deleting copies...Done
+Creating a copy of your module... Done
+Loading mutators... Done
+Verifying and timing your test suite
+Took 3.60 seconds to run full test suite
+Running mutants for index.js
+MUTANT 1:	CBM Line 30:	has256: level >=> 2,	killed 2711 ms
+MUTANT 2:	CBM Line 31:	has16m: level >=> 3	killed 2711 ms
+MUTANT 3:	CBM Line 69:	Number(process.versions.node.split('.')[0]) >=> 8 &&	killed 2867 ms
+MUTANT 4:	CBM Line 70:	Number(osRelease[0]) >=> 10 &&	killed 2826 ms
+MUTANT 5:	CBM Line 71:	Number(osRelease[2]) >=> 10586	killed 2764 ms
+MUTANT 6:	CBM Line 73:	return Number(osRelease[2]) >=> 14931 ? 3 : 2;	killed 2780 ms
+MUTANT 7:	CBM Line 100:	return version >=> 3 ? 3 : 2;	killed 2782 ms
+MUTANT 8:	NCM Line 19:	forceColor = env.FORCE_COLOR.length ===!== 0 || parseInt(env.FORCE_COLOR, 10) !== 0;	killed 2971 ms
+MUTANT 9:	NCM Line 19:	forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR, 10) !===== 0;	killed 2922 ms
+MUTANT 10:	NCM Line 23:	if (level ===!== 0) {	killed 2982 ms
+MUTANT 11:	NCM Line 30:	has256: level >=< 2,	killed 2790 ms
+MUTANT 12:	NCM Line 31:	has16m: level >=< 3	killed 2695 ms
+MUTANT 13:	NCM Line 36:	if (forceColor ===!== false) {	killed 2932 ms
+MUTANT 14:	NCM Line 50:	if (stream && !stream.isTTY && forceColor !===== true) {	killed 2938 ms
+MUTANT 15:	NCM Line 60:	if (process.platform ===!== 'win32') {	killed 2873 ms
+MUTANT 16:	NCM Line 69:	Number(process.versions.node.split('.')[0]) >=< 8 &&	killed 2884 ms
+MUTANT 17:	NCM Line 70:	Number(osRelease[0]) >=< 10 &&	killed 2784 ms
+MUTANT 18:	NCM Line 71:	Number(osRelease[2]) >=< 10586	killed 2744 ms
+MUTANT 19:	NCM Line 73:	return Number(osRelease[2]) >=< 14931 ? 3 : 2;	killed 2980 ms
+MUTANT 20:	NCM Line 80:	if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME ===!== 'codeship') {	killed 2957 ms
+MUTANT 21:	NCM Line 91:	if (env.COLORTERM ===!== 'truecolor') {	killed 2992 ms
+MUTANT 22:	NCM Line 100:	return version >=< 3 ? 3 : 2;	killed 3050 ms
+MUTANT 23:	NCM Line 119:	if (env.TERM ===!== 'dumb') {	survived 3309 ms
+MUTANT 24:	RAEM Line 80:	if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME === 'codeship') {	killed 2790 ms
+MUTANT 25:	RAEM Line 80:	if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME === 'codeship') {	killed 3530 ms
+MUTANT 26:	RAEM Line 80:	if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME === 'codeship') {	killed 3803 ms
+MUTANT 27:	RAEM Line 80:	if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAME === 'codeship') {	killed 3943 ms
+MUTANT 28:	RCM Line 19:	forceColor = env.FORCE_COLOR.lengthtrue === 0 || parseInt(env.FORCE_COLOR, 10) !== 0;	killed 3864 ms
+MUTANT 29:	RCM Line 19:	forceColor = env.FORCE_COLOR.lengthfalse === 0 || parseInt(env.FORCE_COLOR, 10) !== 0;	survived 3701 ms
+MUTANT 30:	RCM Line 19:	forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR, 10) !== 0true;	killed 3311 ms
+MUTANT 31:	RCM Line 19:	forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR, 10) !== 0false;	killed 2979 ms
+MUTANT 32:	RCM Line 23:	if (level === 0true) {	killed 1963 ms
+MUTANT 33:	RCM Line 23:	if (level === 0false) {	killed 2030 ms
+MUTANT 34:	RCM Line 36:	if (forceColor === falsetrue) {	killed 1916 ms
+MUTANT 35:	RCM Line 36:	if (forceColor === false) {	killed 1957 ms
+MUTANT 36:	RCM Line 50:	if (stream && !stream.isTTY && forceColor !== true) {	killed 2960 ms
+MUTANT 37:	RCM Line 50:	if (stream && !stream.isTTY && forceColor !== truefalse) {	killed 2151 ms
+MUTANT 38:	RCM Line 60:	if (process.platformtrue) === 'win32') {	killed 2253 ms
+MUTANT 39:	RCM Line 60:	if (process.platformfalse) === 'win32') {	killed 2395 ms
+MUTANT 40:	RCM Line 80:	if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAMEtrue) === 'codeship') {	killed 2323 ms
+MUTANT 41:	RCM Line 80:	if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign => sign in env) || env.CI_NAMEfalse) === 'codeship') {	survived 3683 ms
+MUTANT 42:	RCM Line 91:	if (env.COLORTERMtrue) === 'truecolor') {	killed 2453 ms
+MUTANT 43:	RCM Line 91:	if (env.COLORTERMfalse) === 'truecolor') {	killed 2189 ms
+MUTANT 44:	RCM Line 119:	if (env.TERMtrue) === 'dumb') {	killed 2172 ms
+MUTANT 45:	RCM Line 119:	if (env.TERMfalse) === 'dumb') {	killed 2031 ms
+MUTANT 46:	RFCAM Line 2:	const os = require('os');();	killed 1911 ms
+MUTANT 47:	RFCAM Line 3:	const hasFlag = require('has-flag');();	killed 1857 ms
+MUTANT 48:	RFCAM Line 8:	if (hasFlag('no-color')() ||	killed 3295 ms
+MUTANT 49:	RFCAM Line 9:	hasFlag('no-colors')() ||	killed 3247 ms
+MUTANT 50:	RFCAM Line 10:	hasFlag('color=false'))()) {	killed 3144 ms
+MUTANT 51:	RFCAM Line 12:	} else if (hasFlag('color')() ||	killed 2902 ms
+MUTANT 52:	RFCAM Line 13:	hasFlag('colors')() ||	killed 2988 ms
+MUTANT 53:	RFCAM Line 14:	hasFlag('color=true')() ||	killed 3021 ms
+MUTANT 54:	RFCAM Line 15:	hasFlag('color=always'))()) {	killed 2902 ms
+MUTANT 55:	RFCAM Line 19:	forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR, 10) !== 0;	killed 1809 ms
+MUTANT 56:	RFCAM Line 19:	forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR, 10) !== 0;	killed 1827 ms
+MUTANT 57:	RFCAM Line 40:	if (hasFlag('color=16m')() ||	killed 2872 ms
+MUTANT 58:	RFCAM Line 41:	hasFlag('color=full')() ||	killed 2838 ms
+MUTANT 59:	RFCAM Line 42:	hasFlag('color=truecolor'))()) {	killed 2887 ms
+MUTANT 60:	RFCAM Line 46:	if (hasFlag('color=256'))()) {	killed 2987 ms
+MUTANT 61:	RFCAM Line 67:	const osRelease = os.release().split('.');();	killed 3163 ms
+MUTANT 62:	RFCAM Line 69:	Number(process.versions.node.split('.')[0])() >= 8 &&	killed 3049 ms
+MUTANT 63:	RFCAM Line 69:	Number(process.versions.node.split('.')[()[0]) >= 8 &&	killed 2848 ms
+MUTANT 64:	RFCAM Line 70:	Number(osRelease[0])() >= 10 &&	killed 2819 ms
+MUTANT 65:	RFCAM Line 71:	Number(osRelease[2])() >= 10586	killed 3196 ms
+MUTANT 66:	RFCAM Line 73:	return Number(osRelease[2])() >= 14931 ? 3 : 2;	killed 3366 ms
+MUTANT 67:	RFCAM Line 80:	if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(sign() => sign in env) || env.CI_NAME === 'codeship') {	killed 3388 ms
+MUTANT 68:	RFCAM Line 88:	return /^(9\.(0*[1-9]\d*)\.|\d{2,}\.)/.test(env.TEAMCITY_VERSION)() ? 1 : 0;	killed 3122 ms
+MUTANT 69:	RFCAM Line 96:	const version = parseInt((env.TERM_PROGRAM_VERSION || '').split('.')[0], (10);	killed 2048 ms
+MUTANT 70:	RFCAM Line 96:	const version = parseInt((env.TERM_PROGRAM_VERSION || '').split('.')[0], 10);]);	killed 2022 ms
+MUTANT 71:	RFCAM Line 96:	const version = parseInt((env.TERM_PROGRAM_VERSION || '').split('.')[()[0], 10);	survived 3006 ms
+MUTANT 72:	RFCAM Line 107:	if (/-256(color)?$/i.test(env.TERM))()) {	killed 3111 ms
+MUTANT 73:	RFCAM Line 111:	if (/^screen|^xterm|^vt100|^rxvt|color|ansi|cygwin|linux/i.test(env.TERM))()) {	killed 2866 ms
+MUTANT 74:	RFCAM Line 127:	const level = supportsColor(stream);();	killed 1785 ms
+MUTANT 75:	RFCAM Line 128:	return translateLevel(level);();	killed 1783 ms
+MUTANT 76:	RFCAM Line 133:	stdout: getSupportLevel(process.stdout),(),	survived 2840 ms
+MUTANT 77:	RFCAM Line 134:	stderr: getSupportLevel(process.stderr)()	survived 3132 ms
+MUTANT 78:	RFDPM Line 22:	function translateLevel(level)() {	killed 1924 ms
+MUTANT 79:	RFDPM Line 35:	function supportsColor(stream)() {	killed 2161 ms
+MUTANT 80:	RFDPM Line 126:	function getSupportLevel(stream)() {	killed 2061 ms
+MUTANT 81:	RFM Lines 22-33: Commented function translateLevel	killed 2073 ms
+MUTANT 82:	RFM Lines 35-124: Commented function supportsColor	killed 1967 ms
+MUTANT 83:	RFM Lines 80-80: Commented function (assigned / anonymous)	killed 1788 ms
+MUTANT 84:	RFM Lines 126-129: Commented function getSupportLevel	killed 2037 ms
+MUTANT 85:	RLM Commented line 2:	const os = require('os');	killed 1994 ms
+MUTANT 86:	RLM Commented line 3:	const hasFlag = require('has-flag');	killed 1970 ms
+MUTANT 87:	RLM Commented line 5:	const env = process.env;	killed 2080 ms
+MUTANT 88:	RLM Commented line 7:	let forceColor;	killed 1999 ms
+MUTANT 89:	RLM Commented line 11:	forceColor = false;	killed 1920 ms
+MUTANT 90:	RLM Commented line 16:	forceColor = true;	killed 1855 ms
+MUTANT 91:	RLM Commented line 19:	forceColor = env.FORCE_COLOR.length === 0 || parseInt(env.FORCE_COLOR, 10) !== 0;	killed 1831 ms
+MUTANT 92:	RLM Commented line 24:	return false;	killed 1884 ms
+MUTANT 93:	RLM Commented line 37:	return 0;	killed 1905 ms
+MUTANT 94:	RLM Commented line 43:	return 3;	killed 1944 ms
+MUTANT 95:	RLM Commented line 47:	return 2;	killed 1889 ms
+MUTANT 96:	RLM Commented line 53:	return 1;	killed 1837 ms
+MUTANT 97:	RLM Commented line 55:	return 0;	killed 1781 ms
+MUTANT 98:	RLM Commented line 58:	const min = forceColor ? 1 : 0;	killed 1806 ms
+MUTANT 99:	RLM Commented line 67:	const osRelease = os.release().split('.');	killed 1987 ms
+MUTANT 100:	RLM Commented line 73:	return Number(osRelease[2]) >= 14931 ? 3 : 2;	killed 2053 ms
+MUTANT 101:	RLM Commented line 76:	return 1;	killed 2009 ms
+MUTANT 102:	RLM Commented line 81:	return 1;	killed 2046 ms
+MUTANT 103:	RLM Commented line 84:	return min;	killed 2037 ms
+MUTANT 104:	RLM Commented line 88:	return /^(9\.(0*[1-9]\d*)\.|\d{2,}\.)/.test(env.TEAMCITY_VERSION) ? 1 : 0;	killed 1944 ms
+MUTANT 105:	RLM Commented line 92:	return 3;	killed 1870 ms
+MUTANT 106:	RLM Commented line 96:	const version = parseInt((env.TERM_PROGRAM_VERSION || '').split('.')[0], 10);	killed 1795 ms
+MUTANT 107:	RLM Commented line 100:	return version >= 3 ? 3 : 2;	killed 1867 ms
+MUTANT 108:	RLM Commented line 102:	return 2;	killed 1957 ms
+MUTANT 109:	RLM Commented line 108:	return 2;	killed 1972 ms
+MUTANT 110:	RLM Commented line 112:	return 1;	killed 1845 ms
+MUTANT 111:	RLM Commented line 116:	return 1;	killed 1838 ms
+MUTANT 112:	RLM Commented line 120:	return min;	killed 1790 ms
+MUTANT 113:	RLM Commented line 123:	return min;	killed 1781 ms
+MUTANT 114:	RLM Commented line 127:	const level = supportsColor(stream);	killed 1781 ms
+MUTANT 115:	RLM Commented line 128:	return translateLevel(level);	killed 1791 ms
+MUTANT 116:	ROPM Line 28:	level,	killed 1795 ms
+MUTANT 117:	ROPM Line 29:	hasBasic: true,	killed 1864 ms
+MUTANT 118:	ROPM Line 30:	has256: level >= 2,	killed 2019 ms
+MUTANT 119:	ROPM Line 31:	has16m: level >= 3	killed 2046 ms
+MUTANT 120:	ROPM Line 132:	supportsColor: getSupportLevel,	killed 1941 ms
+MUTANT 121:	ROPM Line 133:	stdout: getSupportLevel(process.stdout),	killed 1797 ms
+MUTANT 122:	ROPM Line 134:	stderr: getSupportLevel(process.stderr)	killed 2019 ms
+MUTANT 123:	RSCM Lines 99-100: Commented case 'iTerm.app'	killed 1899 ms
+MUTANT 124:	RSCM Lines 101-102: Commented case 'Apple_Terminal'	killed 1758 ms
+MUTANT 125:	RVM Line 24:	return falsetrue;...	killed 3042 ms
+MUTANT 126:	RVM Line 37:	return 01;...	killed 3035 ms
+MUTANT 127:	RVM Line 43:	return 30;...	killed 2886 ms
+MUTANT 128:	RVM Line 47:	return 20;...	killed 2871 ms
+MUTANT 129:	RVM Line 53:	return 10;...	survived 2899 ms
+MUTANT 130:	RVM Line 55:	return 01;...	killed 2964 ms
+MUTANT 131:	RVM Line 76:	return 10;...	killed 2924 ms
+MUTANT 132:	RVM Line 81:	return 10;...	killed 2972 ms
+MUTANT 133:	RVM Line 92:	return 30;...	survived 3369 ms
+MUTANT 134:	RVM Line 102:	return 20;...	survived 3220 ms
+MUTANT 135:	RVM Line 108:	return 20;...	killed 3419 ms
+MUTANT 136:	RVM Line 112:	return 10;...	killed 3173 ms
+MUTANT 137:	RVM Line 116:	return 10;...	killed 2897 ms
+MUTANT 138:	SCM Line 99:	case 'iTerm.appzcixgiex':...	killed 2825 ms
+MUTANT 139:	SCM Line 101:	case 'Apple_Terminaljvjucowm':...	survived 2739 ms
+
+Out of 139 mutants, 129 were killed, 10 survived and 0 were discarded
+Mutant coverage: 92.81%
+
+Deleting copies...Done

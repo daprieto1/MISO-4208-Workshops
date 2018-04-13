@@ -268,6 +268,19 @@ passIntent.putExtra(UxArgument.DISABLE_PASSCODE,new android.os.Parcelable[0]);
 
 ![](assets/stryker2.png)
 
+## Mutode
+
+### Chalk
+
+![](assets/mutode1.png)
+
+![](assets/mutode2.png)
+
+![](assets/mutode3.png)
+
+![](assets/mutode4.png)
+
+![](assets/mutode5.png)
 
 
 
